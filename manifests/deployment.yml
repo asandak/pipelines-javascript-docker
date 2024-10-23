@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: asandakpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asandakpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: asandakpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: asandakpipelinesjavascriptdocker 
+          image: akscontainerregistry11.azurecr.io/asandakpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
